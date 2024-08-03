@@ -1,15 +1,17 @@
 function calcAverageCalories(days) {
-    let totalCalories = 0;
+  let totalCalories = 0;
+  let daysCount = days.length;
 
-    for (let championDay of days) {
-        totalCalories = totalCalories + championDay.calories;
-    }
+  for (let championDay of days) {
+    totalCalories += championDay.calories;
+  }
 
-    return totalCalories / 7;
+  if (totalCalories == 0) {
+    return 0;
+  } 
+
+  return totalCalories / daysCount;
 }
-
-
-
 
 
 console.log(
